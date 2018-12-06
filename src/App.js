@@ -11,19 +11,19 @@ class App extends React.Component {
     items: [],
   };
 
-  handleAddItem = event => {
-    this.setState(prevState => ({items:[...prevState.items, item]}));
+  handleAddItem = item => {
+    this.setState(prevState => ({ items: [...prevState.items, item] }));
   };
 
   handleDeleteLastItem = event => {
-    this.setState(prevState => ({items: this.state.items.slice(0, -1)}));
+    this.setState(prevState => ({ items: this.state.items.slice(0, -1) }));
   };
 
   noItemsFound = () => {
     return this.state.length === 0;
   }
 
-  
+
   render() {
     return (
       <div className="App">
@@ -37,7 +37,7 @@ class App extends React.Component {
           onDeleteLastItem={this.handleDeleteLastItem}
           buttonDisabled={this.noItemsFound()}
         />
-        <ItemList items={this.state.items}/>
+        <ItemList items={this.state.items} />
       </div>
     );
   }

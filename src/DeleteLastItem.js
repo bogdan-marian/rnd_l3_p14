@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const DeleteLastItem = propts => {
+const DeleteLastItem = props => {
     const handleDeleteLastItem = event => {
         props.onDeleteLastItem();
     };
