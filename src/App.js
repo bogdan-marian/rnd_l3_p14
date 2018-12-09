@@ -5,7 +5,6 @@ import CreateNewItem from './CreateNewItem';
 import ItemList from './ItemList';
 import DeleteLastItem from './DeleteLastItem';
 
-
 class App extends React.Component {
   state = {
     items: [],
@@ -20,9 +19,8 @@ class App extends React.Component {
   };
 
   noItemsFound = () => {
-    return this.state.length === 0;
-  }
-
+    return this.state.items.length === 0;
+  };
 
   render() {
     return (

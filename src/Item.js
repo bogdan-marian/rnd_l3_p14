@@ -1,13 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// create the item item component
+/*
+This presentational component can just be a Stateless Functional Component.
+
+You'll see this pattern often - a component for a thing and a component for a list
+of those things.
+*/
 const Item = props => {
-    return <li>{props.item}</li>;
+  return <li>{props.item}</li>;
 };
 
-Item.prototype = {
-    item: PropTypes.string.isRequired,
+Item.propTypes = {
+  item: PropTypes.string.isRequired,
 };
 
 export default Item;
